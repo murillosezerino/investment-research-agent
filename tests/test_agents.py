@@ -2,9 +2,9 @@ from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 
-from src.agents.analyst import build_analyst_chain
 from src.agents.advisor import build_advisor_chain
-from src.agents.researcher import build_researcher_chain, _format_docs
+from src.agents.analyst import build_analyst_chain
+from src.agents.researcher import _format_docs, build_researcher_chain
 from src.schemas.models import AgentStep, ResearchResult
 
 

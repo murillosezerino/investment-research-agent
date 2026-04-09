@@ -1,7 +1,7 @@
 """Orchestrator — coordinates the multi-agent pipeline: Researcher → Analyst → Advisor."""
 
-from src.agents.analyst import build_analyst_chain
 from src.agents.advisor import build_advisor_chain
+from src.agents.analyst import build_analyst_chain
 from src.agents.researcher import build_researcher_chain
 from src.rag.retriever import get_retriever
 from src.schemas.models import AgentStep, ResearchResult

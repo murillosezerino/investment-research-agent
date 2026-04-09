@@ -59,7 +59,11 @@ class TestResearchEndpoint:
         assert data["recommendation"] == "HOLD"
 
     def test_handles_pipeline_error(self, test_client):
-        with patch("src.main.run_research", new_callable=AsyncMock, side_effect=RuntimeError("LLM timeout")):
+        with patch(
+            "src.main.run_research",
+            new_callable=AsyncMock,
+            side_effect=RuntimeError("LLM timeout"),
+        ):
             response = test_client.post(
                 "/research",
                 json={"question": "Qual o risco dos fundos imobiliários?"},
