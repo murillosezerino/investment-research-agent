@@ -40,9 +40,9 @@ async def ingest(request: IngestRequest):
         vector_store = ingest_documents(request.source_dir)
         count = vector_store._collection.count()
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail=str(e)) from e
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Ingestion failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Ingestion failed: {e}") from e
 
     return IngestResult(
         documents_indexed=count,
@@ -56,6 +56,6 @@ async def research(request: QuestionRequest):
     try:
         result = await run_research(request.question)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Research pipeline failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Research pipeline failed: {e}") from e
 
     return result
