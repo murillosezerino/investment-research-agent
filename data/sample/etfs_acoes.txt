@@ -1,0 +1,46 @@
+Guia de ETFs e Ações — Renda Variável no Brasil (2025)
+
+1. ETFs (Exchange Traded Funds)
+ETFs são fundos negociados em bolsa que replicam índices de mercado com baixo custo.
+
+Principais ETFs da B3:
+- BOVA11: replica o Ibovespa. Taxa de administração: 0.10% ao ano. Volume médio: R$ 500M/dia.
+- IVVB11: replica o S&P 500 em reais. Taxa: 0.23% ao ano. Exposição ao mercado americano.
+- SMAL11: replica o índice Small Caps. Taxa: 0.50% ao ano. Maior volatilidade.
+- HASH11: replica o Nasdaq Crypto Index. Taxa: 0.30% ao ano. Exposição a criptomoedas.
+- IMAB11: replica o IMA-B (títulos IPCA+). Taxa: 0.25% ao ano. Renda fixa via ETF.
+
+Vantagens dos ETFs:
+- Diversificação instantânea com uma única ordem.
+- Custos menores que fundos ativos (taxa média: 0.20% vs 2.0% em fundos ativos).
+- Transparência: composição da carteira é pública.
+- Liquidez: negociados em bolsa durante o pregão.
+
+Desvantagens:
+- Não há isenção de IR para vendas até R$ 20.000/mês (diferente de ações).
+- Alíquota de 15% sobre ganho de capital.
+- ETFs não pagam dividendos diretamente (reinvestem automaticamente).
+
+2. Ações — Indicadores Fundamentalistas
+- P/L (Preço/Lucro): indica quantos anos de lucro o mercado precifica. Ibovespa médio: 8x.
+- P/VP (Preço/Valor Patrimonial): abaixo de 1 indica desconto. Ibovespa médio: 1.5x.
+- Dividend Yield: dividendos pagos / preço da ação. Média Ibovespa: 6.2% em 2024.
+- ROE (Return on Equity): lucro / patrimônio. Acima de 15% é considerado bom.
+- Dívida Líquida/EBITDA: acima de 3x indica endividamento elevado.
+
+3. Setores em destaque (2025)
+- Bancos: beneficiados pela Selic alta. Itaú (ITUB4) com ROE de 21%.
+- Elétricas: defensivas, com dividendos previsíveis. Taesa (TAEE11) com DY de 9%.
+- Commodities: exposição ao ciclo global. Vale (VALE3) e Petrobras (PETR4).
+- Tecnologia: crescimento acelerado. TOTVS (TOTS3) e Locaweb (LWSA3).
+
+4. Riscos da renda variável
+- Risco de mercado: Ibovespa caiu 30% em 2020 (COVID) e recuperou em 9 meses.
+- Risco setorial: concentração em poucos setores amplifica perdas.
+- Risco de liquidez: small caps podem ter spreads elevados.
+- Risco cambial (para ETFs internacionais): desvalorização do dólar reduz retorno em reais.
+
+5. Estratégias de alocação por perfil
+- Conservador: 80% renda fixa + 10% FIIs + 10% ETFs de renda fixa (IMAB11).
+- Moderado: 50% renda fixa + 20% FIIs + 20% ETFs de ações + 10% ações individuais.
+- Agressivo: 20% renda fixa + 20% FIIs + 30% ações + 20% ETFs internacionais + 10% cripto.

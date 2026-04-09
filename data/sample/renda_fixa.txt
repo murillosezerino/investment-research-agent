@@ -1,0 +1,43 @@
+Guia de Renda Fixa — Títulos Públicos e Privados (2025)
+
+1. Tesouro Direto
+O Tesouro Direto é o programa do governo federal para venda de títulos públicos a pessoas físicas.
+
+Principais títulos disponíveis (março/2025):
+- Tesouro Selic 2028: rendimento de 100% da Selic (14.25% ao ano). Liquidez diária.
+- Tesouro IPCA+ 2035: IPCA + 7.2% ao ano. Protege contra inflação no longo prazo.
+- Tesouro IPCA+ 2045 com juros semestrais: IPCA + 7.0% ao ano. Paga cupons a cada 6 meses.
+- Tesouro Prefixado 2028: 14.8% ao ano fixo. Aposta na queda futura dos juros.
+
+Riscos do Tesouro Direto:
+- Marcação a mercado: resgates antes do vencimento podem gerar perdas (especialmente IPCA+ e Prefixado).
+- Risco soberano: extremamente baixo, pois o emissor é o governo federal.
+- Risco de reinvestimento: ao vencimento, as taxas disponíveis podem ser menores.
+
+2. CDBs (Certificados de Depósito Bancário)
+- Emitidos por bancos, cobertos pelo FGC até R$ 250.000 por CPF/instituição.
+- CDB de banco médio: 120-130% do CDI para prazos de 2-3 anos.
+- CDB de bancão (Itaú, BB, Bradesco): 100-105% do CDI.
+
+3. LCIs e LCAs
+- Isentas de IR para pessoa física.
+- LCI (Letra de Crédito Imobiliário): lastro em crédito imobiliário. Prazo mínimo: 12 meses.
+- LCA (Letra de Crédito do Agronegócio): lastro em crédito agrícola. Prazo mínimo: 9 meses.
+- Rentabilidade líquida equivalente a 115-125% do CDI (considerando isenção de IR).
+
+4. Debêntures
+- Títulos de dívida corporativa. Sem cobertura do FGC.
+- Debêntures incentivadas (Lei 12.431): isentas de IR, financiam projetos de infraestrutura.
+- Spread sobre CDI varia de 1.5% a 4.0% dependendo do rating da empresa.
+
+5. CRIs e CRAs
+- Certificados de Recebíveis Imobiliários e do Agronegócio.
+- Isentos de IR para pessoa física.
+- Risco de crédito do originador/devedor. Sem cobertura do FGC.
+- Rentabilidade: IPCA + 7% a 9% ou CDI + 2% a 4% dependendo do risco.
+
+6. Comparativo de rentabilidade líquida (prazo 2 anos, alíquota IR 15%)
+- Tesouro Selic: ~12.1% líquido
+- CDB 120% CDI: ~14.5% líquido
+- LCI 95% CDI: ~13.5% líquido (isento de IR)
+- Debênture incentivada IPCA+7%: ~11.7% real (isento de IR)

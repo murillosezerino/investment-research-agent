@@ -1,0 +1,34 @@
+Guia de Fundos Imobiliários (FIIs) — Atualizado em 2025
+
+1. O que são FIIs?
+Fundos Imobiliários são veículos de investimento coletivo que aplicam recursos em empreendimentos
+imobiliários como shoppings, lajes corporativas, galpões logísticos e hospitais. Os cotistas
+recebem rendimentos mensais isentos de IR (para pessoa física) proporcionais às suas cotas.
+
+2. Principais indicadores
+- IFIX (Índice de Fundos Imobiliários): rentabilidade de 12.3% em 2024, superando o CDI no período.
+- Dividend Yield médio: 8.5% ao ano para fundos de tijolo; 11.2% para fundos de papel.
+- P/VP médio do mercado: 0.92 (desconto de 8% sobre o valor patrimonial em março/2025).
+
+3. Categorias de FIIs
+- Fundos de Tijolo: investem diretamente em imóveis físicos. Exemplo: HGLG11 (galpões logísticos).
+- Fundos de Papel: investem em CRIs e LCIs. Exemplo: KNIP11 (indexado ao IPCA).
+- Fundos de Fundos (FOFs): diversificam investindo em cotas de outros FIIs. Exemplo: BCFF11.
+- Fundos Híbridos: combinam tijolo e papel na mesma carteira.
+
+4. Riscos
+- Vacância: imóveis desocupados reduzem dividendos. Taxa média de vacância em lajes corporativas: 22% em SP.
+- Risco de crédito (fundos de papel): inadimplência dos CRIs pode comprometer rendimentos.
+- Risco de mercado: cotas flutuam na B3 e podem desvalorizar em cenários de alta de juros.
+- Risco de liquidez: fundos menores podem ter baixo volume de negociação.
+- Concentração: fundos com poucos imóveis ou inquilinos têm risco de concentração elevado.
+
+5. Cenário de juros
+Com a Selic a 14.25% em março/2025, FIIs de papel (indexados ao CDI/IPCA) se beneficiam.
+FIIs de tijolo tendem a sofrer com juros altos pois investidores migram para renda fixa.
+Historicamente, FIIs de tijolo se recuperam fortemente quando o ciclo de corte de juros começa.
+
+6. Tributação
+- Rendimentos mensais: isentos de IR para pessoa física (com mais de 50 cotistas e cotas em bolsa).
+- Ganho de capital na venda de cotas: tributado em 20%.
+- Não há come-cotas como em fundos tradicionais.
