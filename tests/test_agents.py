@@ -61,6 +61,9 @@ class TestOrchestrator:
         mock_chain = MagicMock()
         mock_chain.ainvoke = AsyncMock(return_value="Mock output")
 
+        mock_memory = MagicMock()
+        mock_memory.recall.return_value = []
+
         with (
             patch("src.agents.orchestrator.get_retriever", return_value=mock_retriever),
             patch("src.agents.orchestrator.build_researcher_chain", return_value=mock_chain),
@@ -69,7 +72,7 @@ class TestOrchestrator:
         ):
             from src.agents.orchestrator import run_research
 
-            result = await run_research("Qual o risco de FIIs?")
+            result = await run_research("Qual o risco de FIIs?", memory=mock_memory)
 
         assert isinstance(result, ResearchResult)
         assert result.question == "Qual o risco de FIIs?"
@@ -77,3 +80,7 @@ class TestOrchestrator:
         assert result.steps[0].agent == "researcher"
         assert result.steps[1].agent == "analyst"
         assert result.steps[2].agent == "advisor"
+        # memory is consulted before and written after the pipeline
+        mock_memory.recall.assert_called_once_with("Qual o risco de FIIs?")
+        mock_memory.remember.assert_called_once()
+        assert result.recalled_memories == []

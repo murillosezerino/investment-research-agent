@@ -25,6 +25,10 @@ class ResearchResult(BaseModel):
     question: str
     steps: list[AgentStep]
     recommendation: str
+    recalled_memories: list[str] = Field(
+        default_factory=list,
+        description="Questions of past sessions recalled from long-term memory.",
+    )
 
 
 class IngestResult(BaseModel):
@@ -35,3 +39,20 @@ class IngestResult(BaseModel):
 class HealthResponse(BaseModel):
     status: str = "ok"
     version: str
+
+
+class MemoryRecallRequest(BaseModel):
+    query: str = Field(..., min_length=3, examples=["riscos de fundos imobiliários"])
+    k: int = Field(default=3, ge=1, le=20)
+
+
+class MemoryRecallItem(BaseModel):
+    question: str
+    recommendation: str
+    risk_score: str | None = None
+    timestamp: str | None = None
+
+
+class MemoryStats(BaseModel):
+    stored: int
+    collection: str

@@ -3,11 +3,16 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException
 
 from src.agents.orchestrator import run_research
+from src.config import settings
+from src.memory import MemoryStore
 from src.rag.ingestion import ingest_documents
 from src.schemas.models import (
     HealthResponse,
     IngestRequest,
     IngestResult,
+    MemoryRecallItem,
+    MemoryRecallRequest,
+    MemoryStats,
     QuestionRequest,
     ResearchResult,
 )
@@ -59,3 +64,32 @@ async def research(request: QuestionRequest):
         raise HTTPException(status_code=500, detail=f"Research pipeline failed: {e}") from e
 
     return result
+
+
+@app.post("/memory/recall", response_model=list[MemoryRecallItem])
+async def memory_recall(request: MemoryRecallRequest):
+    """Recall conclusions from past research sessions related to a query."""
+    try:
+        records = MemoryStore().recall(request.query, k=request.k)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Memory recall failed: {e}") from e
+
+    return [
+        MemoryRecallItem(
+            question=r.question,
+            recommendation=r.recommendation,
+            risk_score=r.risk_score,
+            timestamp=r.timestamp,
+        )
+        for r in records
+    ]
+
+
+@app.get("/memory/stats", response_model=MemoryStats)
+async def memory_stats():
+    """Return how many sessions are currently held in long-term memory."""
+    try:
+        store = MemoryStore()
+        return MemoryStats(stored=store.count(), collection=settings.memory_collection)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Memory stats failed: {e}") from e

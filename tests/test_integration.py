@@ -34,6 +34,9 @@ class TestFullPipeline:
 
         mock_retriever = MagicMock()
 
+        mock_memory = MagicMock()
+        mock_memory.recall.return_value = []
+
         with (
             patch("src.agents.orchestrator.get_retriever", return_value=mock_retriever),
             patch("src.agents.orchestrator.build_researcher_chain", return_value=mock_researcher),
@@ -42,7 +45,9 @@ class TestFullPipeline:
         ):
             from src.agents.orchestrator import run_research
 
-            result = await run_research("Quais são os riscos de investir em FIIs?")
+            result = await run_research(
+                "Quais são os riscos de investir em FIIs?", memory=mock_memory
+            )
 
         # Verify pipeline order
         assert result.steps[0].agent == "researcher"

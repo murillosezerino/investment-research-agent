@@ -10,6 +10,12 @@ class Settings(BaseSettings):
     llm_model: str = "gpt-4o-mini"
     embedding_model: str = "text-embedding-3-small"
 
+    # Long-term memory
+    enable_memory: bool = True
+    memory_persist_dir: str = "./data/memory"
+    memory_collection: str = "research_memory"
+    memory_recall_k: int = 3
+
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
 
 

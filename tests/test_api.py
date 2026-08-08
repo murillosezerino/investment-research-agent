@@ -1,5 +1,6 @@
-from unittest.mock import AsyncMock, patch
+from unittest.mock import AsyncMock, MagicMock, patch
 
+from src.memory import MemoryRecord
 from src.schemas.models import AgentStep, ResearchResult
 
 
@@ -69,3 +70,32 @@ class TestResearchEndpoint:
                 json={"question": "Qual o risco dos fundos imobiliários?"},
             )
         assert response.status_code == 500
+
+
+class TestMemoryEndpoints:
+    def test_recall_returns_records(self, test_client):
+        store = MagicMock()
+        store.recall.return_value = [
+            MemoryRecord(question="Risco de FIIs?", recommendation="HOLD", risk_score="5"),
+        ]
+        with patch("src.main.MemoryStore", return_value=store):
+            response = test_client.post(
+                "/memory/recall",
+                json={"query": "fundos imobiliários", "k": 3},
+            )
+        assert response.status_code == 200
+        data = response.json()
+        assert data[0]["recommendation"] == "HOLD"
+        assert data[0]["risk_score"] == "5"
+
+    def test_recall_rejects_short_query(self, test_client):
+        response = test_client.post("/memory/recall", json={"query": "x"})
+        assert response.status_code == 422
+
+    def test_stats_returns_count(self, test_client):
+        store = MagicMock()
+        store.count.return_value = 7
+        with patch("src.main.MemoryStore", return_value=store):
+            response = test_client.get("/memory/stats")
+        assert response.status_code == 200
+        assert response.json()["stored"] == 7

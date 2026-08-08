@@ -16,7 +16,11 @@ dependencies = [
     "python-dotenv>=1.0.0",
     "pypdf>=5.0.0",
     "tiktoken>=0.8.0",
+    "mcp>=1.2.0",
 ]
+
+[project.scripts]
+investment-mcp = "src.mcp_server.server:main"
 
 [project.optional-dependencies]
 dev = [
