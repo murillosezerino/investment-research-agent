@@ -27,7 +27,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Investment Research Agent",
-    description="Multi-agent RAG system for investment research powered by LangChain",
+    description="Sequential RAG pipeline for investment research (Researcher, Analyst, Advisor) with long-term memory and an MCP server, powered by LangChain",
     version=VERSION,
     lifespan=lifespan,
 )
@@ -57,7 +57,7 @@ async def ingest(request: IngestRequest):
 
 @app.post("/research", response_model=ResearchResult)
 async def research(request: QuestionRequest):
-    """Run the multi-agent research pipeline on an investment question."""
+    """Run the sequential research pipeline on an investment question."""
     try:
         result = await run_research(request.question)
     except Exception as e:

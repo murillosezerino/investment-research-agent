@@ -1,6 +1,6 @@
 """MCP server exposing the investment-research agent over the Model Context Protocol.
 
-This makes the agent's capabilities — document retrieval, the full multi-agent
+This makes the agent's capabilities — document retrieval, the full sequential
 pipeline, and the long-term memory layer — consumable as tools by any MCP client
 (Claude Desktop, IDEs, other agents). The same engineering assets (semantic
 retrieval + persistent memory) that power the HTTP API are surfaced here as a

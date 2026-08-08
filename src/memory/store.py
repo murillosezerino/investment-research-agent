@@ -47,7 +47,7 @@ class MemoryStore:
 
     def count(self) -> int:
         """Number of memories currently stored."""
-        return self._store._collection.count()
+        return len(self._store.get()["ids"])
 
 
 def format_memories(records: list[MemoryRecord]) -> str:

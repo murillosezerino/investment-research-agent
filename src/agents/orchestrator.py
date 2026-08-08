@@ -1,4 +1,4 @@
-"""Orchestrator — coordinates the multi-agent pipeline: Researcher → Analyst → Advisor.
+"""Orchestrator — runs a sequential, role-based RAG pipeline: Researcher, Analyst, Advisor.
 
 The pipeline is wrapped in a long-term memory layer: before running, it recalls
 semantically related past sessions and replays them as context for the Advisor;
@@ -15,7 +15,7 @@ from src.schemas.models import AgentStep, ResearchResult
 
 
 async def run_research(question: str, memory: MemoryStore | None = None) -> ResearchResult:
-    """Execute the full multi-agent pipeline for an investment research question.
+    """Execute the full sequential research pipeline for an investment research question.
 
     Pipeline:
         0. Memory   — recalls related past sessions to enrich context (long-term memory)

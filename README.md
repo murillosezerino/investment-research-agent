@@ -5,13 +5,13 @@
 ![Docker](https://img.shields.io/badge/container-Docker-2496ED)
 ![MCP](https://img.shields.io/badge/protocol-MCP-6E56CF)
 
-> A multi-agent RAG system for investment research with a **long-term memory layer** and an **MCP server**, orchestrated with LangChain and served via FastAPI.
+> A sequential RAG pipeline for investment research (Researcher, Analyst, Advisor) with a **long-term memory layer** and an **MCP server**, orchestrated with LangChain and served via FastAPI.
 
-Three role-specialized agents (Researcher, Analyst, Advisor) work in sequence over a vector store of research material, with explicit handoff between roles. Each session is persisted to **long-term memory**, so the system recalls related past conclusions to enrich new answers instead of starting cold every time. The same capabilities are exposed both over HTTP and as **MCP tools**, so any MCP client (Claude Desktop, IDEs, other agents) can use them.
+Three role-specialized stages (Researcher, Analyst, Advisor) run in sequence over a vector store of research material, each passing its structured output to the next. This is a linear LCEL pipeline, not autonomous agents with dynamic routing or tool-calling. Each session is persisted to **long-term memory**, so the system recalls related past conclusions to enrich new answers instead of starting cold every time. The same capabilities are exposed both over HTTP and as **MCP tools**, so any MCP client (Claude Desktop, IDEs, other agents) can use them.
 
 ## What this project explores
 
-- **Multi-agent orchestration** with three role-specialized agents
+- **Sequential role-based orchestration** (Researcher, Analyst, Advisor) with structured handoff
 - **Vector retrieval** (RAG) with ChromaDB
 - **Long-term memory** — semantic, persistent episodic recall across sessions
 - **MCP server** — agent capabilities surfaced as standard Model Context Protocol tools
@@ -80,7 +80,7 @@ Endpoints:
 |--------|------------------|----------------------------------------------|
 | GET    | `/health`        | Liveness                                     |
 | POST   | `/ingest`        | Index documents into the corpus              |
-| POST   | `/research`      | Run the multi-agent pipeline                 |
+| POST   | `/research`      | Run the sequential research pipeline         |
 | POST   | `/memory/recall` | Recall related past sessions                 |
 | GET    | `/memory/stats`  | Count of sessions in long-term memory        |
 
@@ -121,7 +121,7 @@ Copy `.env.example` to `.env`. Memory-related settings:
 
 ## Notes
 
-This is exploratory work on agentic patterns. The recommendations produced are not investment advice — they reflect what the LLM synthesizes from indexed material, with all the limitations that implies (hallucination, context window, model bias).
+This is exploratory work on RAG, long-term memory and MCP patterns. The pipeline is sequential (LCEL), not an autonomous multi-agent system with dynamic routing or tool-calling. The recommendations produced are not investment advice — they reflect what the LLM synthesizes from indexed material, with all the limitations that implies (hallucination, context window, model bias).
 
 ## Author
 
