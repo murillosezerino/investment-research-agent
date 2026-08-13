@@ -125,5 +125,5 @@ This is exploratory work on RAG, long-term memory and MCP patterns. The pipeline
 
 ## Author
 
-Murillo Sezerino — Data Engineer & Analytics
+Murillo Sezerino — Analytics Engineer
 [murillosezerino.com](https://murillosezerino.com) · [LinkedIn](https://linkedin.com/in/murillosezerino)
